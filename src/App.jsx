@@ -178,21 +178,20 @@ function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-secondary/5" />
 
-            {/* Image Placeholder */}
+            {/* User Image */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="relative aspect-square w-full rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex flex-col items-center justify-center group mb-6"
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10" />
-              <Camera
-                size={48}
-                className="text-white/20 group-hover:text-primary/40 transition-colors"
+              <img
+                src="/Screenshot_20260112-093808.Photos.png"
+                alt="Birthday Person"
+                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
               />
-              <span className="mt-4 text-white/30 font-medium group-hover:text-white/50 transition-colors">
-                Your Image Here
-              </span>
+              {/* 0.4 opacity black overlay as a filter */}
+              <div className="absolute inset-0 bg-black/40 z-10" />
 
               <motion.div
                 animate={{
